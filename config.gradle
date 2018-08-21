@@ -1,0 +1,17 @@
+ext{
+    kotlin_version="1.1.2"
+    gradle_version="2.2.2"
+    android=[
+            compileSdkVersion: 25,        //compileSdkVersion 26
+            buildToolsVersion: "25.0.2",  //buildToolsVersion "25.0.2"
+            minSdkVersion: 16,            //minSdkVersion 14
+            targetSdkVersion: 25,         //targetSdkVersion 26
+            versionCode: 1000,               //versionCode 1
+            versionName: "1.0.0.0"            //versionName "1.0"
+    ]
+    dependencies=[
+            "appcompat-v7" : 'com.android.support:appcompat-v7:25.+',
+            "kotlin-stdlib" :"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            "compiler" :"com.android.databinding:compiler:$gradle_version"////这里的版本对应gradle的版本
+    ]
+}
