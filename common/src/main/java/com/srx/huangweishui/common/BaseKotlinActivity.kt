@@ -8,7 +8,7 @@ import com.srx.huangweishui.common.aplication.BaseKotlinAplication
 /**
  * Created by huangweishui on 2018/8/21.
  */
-open abstract class BaseKotlinActivity:AppCompatActivity() {
+ abstract class BaseKotlinActivity:AppCompatActivity() {
     public var mContext:Context?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

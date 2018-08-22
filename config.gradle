@@ -12,6 +12,8 @@ ext{
     dependencies=[
             "appcompat-v7" : 'com.android.support:appcompat-v7:25.+',
             "kotlin-stdlib" :"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
-            "compiler" :"com.android.databinding:compiler:$gradle_version"////这里的版本对应gradle的版本
+            "compiler" :"com.android.databinding:compiler:$gradle_version",////这里的版本对应gradle的版本
+            "arouter-api" :"com.alibaba:arouter-api:1.4.0",
+            "arouter-compiler" :"com.alibaba:arouter-compiler:1.2.1"
     ]
 }

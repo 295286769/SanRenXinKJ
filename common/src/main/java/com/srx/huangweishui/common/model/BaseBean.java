@@ -4,6 +4,8 @@ package com.srx.huangweishui.common.model;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
+import com.srx.huangweishui.common.BR;
+
 /**
  * Created by huangweishui on 2018/8/21.
  */

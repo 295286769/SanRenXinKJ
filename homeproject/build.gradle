@@ -7,7 +7,7 @@ if(isModule.toBoolean()){
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'//kapt 插件
+//apply plugin: 'kotlin-kapt'//kapt 插件
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -52,5 +52,10 @@ dependencies {
 //        exclude group: 'com.android.support', module: 'support-annotations'
 //    })
 //    compile 'com.android.support:appcompat-v7:27.+'
-//    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
+}
+task clean(type: Exec) {
+    ext.lockhunter = '\"C:\\LockHunter.exe\"'
+    def buildDir = file(new File("build"))
+    commandLine 'cmd', "$lockhunter", '/delete', '/silent', buildDir
 }

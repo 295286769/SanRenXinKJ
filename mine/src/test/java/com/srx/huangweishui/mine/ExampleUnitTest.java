@@ -1,5 +1,4 @@
-package com.srx.huangweishui.sanrenxinkj;
-
+package com.srx.huangweishui.mine;
 
 import org.junit.Test;
 
