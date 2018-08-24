@@ -8,7 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.srx.huangweishui.common.R;
-import com.srx.huangweishui.common.aplication.BaseKotlinAplication;
+import com.srx.huangweishui.common.aplication.BaseAplication;
 
 
 public class ToasterManager {
@@ -49,15 +49,15 @@ public class ToasterManager {
 
     private static TextView intToast() {
         if (mToast == null) {
-            mToast = new Toast(BaseKotlinAplication.Companion.getIncetence());
+            mToast = new Toast(BaseAplication.getIntence());
         }
         LayoutInflater inflate = (LayoutInflater)
-                BaseKotlinAplication.Companion.getIncetence().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                BaseAplication.getIntence().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View layout = inflate.inflate(R.layout.toast, null);
         TextView title = (TextView) layout.findViewById(R.id.message_textview);
         mToast.setDuration(Toast.LENGTH_SHORT);
 //        mToast.setGravity(Gravity.CENTER, 0, 0);
-        mToast.setGravity(Gravity.BOTTOM, 0, ScreenUtils.dpToPx(BaseKotlinAplication.Companion.getIncetence(),50));
+        mToast.setGravity(Gravity.BOTTOM, 0, ScreenUtils.dpToPx(BaseAplication.getIntence(),50));
         mToast.setView(layout);
         return title;
     }

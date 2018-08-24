@@ -6,7 +6,8 @@ import android.graphics.Rect;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
-import com.srx.huangweishui.common.aplication.BaseKotlinAplication;
+import com.srx.huangweishui.common.aplication.BaseAplication;
+
 
 public class ScreenUtils {
     /**
@@ -107,7 +108,7 @@ public class ScreenUtils {
     }
 
     public static int getWindowsWidth() {
-        WindowManager wm = (WindowManager) BaseKotlinAplication.Companion.getIncetence().getSystemService(Context.WINDOW_SERVICE);
+        WindowManager wm = (WindowManager) BaseAplication.getIntence().getSystemService(Context.WINDOW_SERVICE);
         return wm.getDefaultDisplay().getWidth();
     }
 

@@ -3,19 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<!--<data>-->
-    <!--<variable-->
-        <!--name="myAppBean"-->
-        <!--type="com.srx.huangweishui.sanrenxinkj.model.MyAppBean"/>-->
-<!--</data>-->
+    <!--<data>-->
+        <!--<import type="com.srx.huangweishui.common.model.BaseBean" />-->
+        <!--<variable name="baseBean" type="BaseBean" />-->
+    <!--</data>-->
     <!--<LinearLayout-->
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent"-->
         <!--android:orientation="vertical">-->
         <!--<TextView-->
             <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@{myAppBean.annName}" />-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="@{baseBean.userName}"-->
+            <!--/>-->
     <!--</LinearLayout>-->
 
 </LinearLayout>

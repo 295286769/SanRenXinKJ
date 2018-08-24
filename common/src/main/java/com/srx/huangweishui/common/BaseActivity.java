@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by huangweishui on 2018/8/21.
  */
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +16,8 @@ public class BaseActivity extends AppCompatActivity {
         initView();
         initRequest();
     }
+
+    public abstract int setContentView();
 
     private void initRequest() {
 

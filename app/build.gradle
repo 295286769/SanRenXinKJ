@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
 //apply plugin: 'kotlin-kapt'//kapt 插件
 
 android {
@@ -12,16 +12,21 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
-            buildConfigField("boolean","isDebug","false")
+            buildConfigField("boolean", "isDebug", "false")
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            buildConfigField("string","isDebug","true")
+            buildConfigField("boolean","isDebug","true")
         }
     }
 
@@ -31,19 +36,21 @@ android {
 }
 
 dependencies {
-
-    if (isModule.toBoolean()) {
-        compile project(':common')
-    } else {
-        compile project(':homeproject')
-        compile project(':mine')
-    }
+    testCompile 'junit:junit:4.12'
+    compile project(':common')
+//    if (isModule.toBoolean()) {
+//        compile project(':common')
+//    } else {
+//        compile project(':homeproject')
+//        compile project(':mine')
+//    }
 
 //    compile fileTree(dir: 'libs', include: ['*.jar'])
 //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
 //        exclude group: 'com.android.support', module: 'support-annotations'
 //    })
 //    compile 'com.android.support:appcompat-v7:25.+'
-    testCompile 'junit:junit:4.12'
+
 //    kapt rootProject.ext.dependencies["compiler"]
+//    androidTestCompile 'junit:junit:4.12'
 }

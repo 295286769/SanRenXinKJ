@@ -19,17 +19,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled = true
-    }
+//    dataBinding {
+//        enabled = true
+//    }
 }
 
 dependencies {
     compile project(':common')
     testCompile 'junit:junit:4.12'
-    task clean(type: Exec) {
-        ext.lockhunter = '\"C:\\LockHunter.exe\"'
-        def buildDir = file(new File("build"))
-        commandLine 'cmd', "$lockhunter", '/delete', '/silent', buildDir
-    }
+//    task clean(type: Exec) {
+//        ext.lockhunter = '\"C:\\LockHunter.exe\"'
+//        def buildDir = file(new File("build"))
+//        commandLine 'cmd', "$lockhunter", '/delete', '/silent', buildDir
+//    }
 }

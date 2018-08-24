@@ -6,7 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 
-import com.srx.huangweishui.common.aplication.BaseKotlinAplication;
+
+import com.srx.huangweishui.common.aplication.BaseAplication;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class ResourceUtils {
 
 	private static Resources getResources() {
 		if (sResources == null) {
-			sResources = BaseKotlinAplication.Companion.getIncetence().getResources();
+			sResources = BaseAplication.getIntence().getResources();
 		}
 		return sResources;
 	}

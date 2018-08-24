@@ -8,6 +8,9 @@ package com.srx.huangweishui.sanrenxinkj.model;
 
 public class MyAppBean {
     private String annName;
+    public MyAppBean(String annName){
+        this.annName=annName;
+    }
     public String getAnnName() {
         return annName;
     }
