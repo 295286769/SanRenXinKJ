@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android'
 //apply plugin: 'kotlin-android-extensions'
 //apply plugin: 'kotlin-kapt'//kapt 插件
 
@@ -37,13 +37,14 @@ android {
 
 dependencies {
     testCompile 'junit:junit:4.12'
-    compile project(':common')
-//    if (isModule.toBoolean()) {
-//        compile project(':common')
-//    } else {
-//        compile project(':homeproject')
-//        compile project(':mine')
-//    }
+//    compile project(':common')
+    if (isModule.toBoolean()) {
+        compile project(':common')
+    } else {
+        compile project(':homeproject')
+        compile project(':mine')
+    }
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
 //    compile fileTree(dir: 'libs', include: ['*.jar'])
 //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

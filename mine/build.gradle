@@ -9,7 +9,11 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
-
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -25,8 +29,11 @@ android {
 }
 
 dependencies {
-    compile project(':common')
     testCompile 'junit:junit:4.12'
+    compile project(':common')
+
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+//    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 //    task clean(type: Exec) {
 //        ext.lockhunter = '\"C:\\LockHunter.exe\"'
 //        def buildDir = file(new File("build"))

@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <application android:name=".aplication.AppAplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/common_ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -20,11 +20,21 @@
         android:launchMode="singleTop"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:screenOrientation="portrait" />
-        <!--<activity-->
-            <!--android:name="com.srx.huangweishui.homeproject.activity.WellComKotlinActivity"-->
-            <!--android:launchMode="singleTop"-->
-            <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
-            <!--android:screenOrientation="portrait" />-->
+        <activity
+        android:name="com.srx.huangweishui.sanrenxinkj.activity.TestActivity"
+        android:launchMode="singleTop"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait" />
+        <activity
+            android:name="com.srx.huangweishui.homeproject.activity.WellComActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.srx.huangweishui.mine.MineActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
         <!--<activity-->
             <!--android:name="com.srx.huangweishui.common.WebActivity"-->
             <!--android:launchMode="singleTop"-->

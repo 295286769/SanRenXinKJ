@@ -17,5 +17,9 @@ public class BaseAplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        initData();
+    }
+
+    public void initData() {
     }
 }

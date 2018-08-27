@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-//apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android'
 //apply plugin: 'kotlin-android-extensions'
 //apply plugin: 'kotlin-kapt'//kapt 插件(在 Kotlin 中使用注解框架则需要添加 kotlin-kapt 插件激活 kapt，并使用 kapt 替换 annotationProcessor：)
 
@@ -28,9 +28,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled = true
-    }
+//    dataBinding {
+//        enabled = true
+//    }
 }
 //kapt {
 //    generateStubs = true
@@ -43,10 +43,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile rootProject.ext.dependencies["appcompat-v7"]
-//    compile rootProject.ext.dependencies["kotlin-stdlib"]
-//    kapt rootProject.ext.dependencies["compiler"]
-    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    compile rootProject.ext.dependencies["kotlin-stdlib"]
+    annotationProcessor rootProject.ext.dependencies["compiler"]
+
     compile rootProject.ext.dependencies["arouter-api"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
 
     testCompile 'junit:junit:4.12'

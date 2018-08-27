@@ -1,25 +1,23 @@
 package com.srx.huangweishui.homeproject.activity;
 
-import android.app.Activity;
-import android.databinding.DataBindingUtil;
-import android.os.Bundle;
 
+import com.srx.huangweishui.common.BaseActivity;
 import com.srx.huangweishui.homeproject.R;
-import com.srx.huangweishui.homeproject.databinding.ActivityHomeBinding;
+
 
 /**
  * Created by huangweishui on 2018/8/24.
  */
 
-public class HomeActivity extends Activity {
-    private ActivityHomeBinding activityHomeBinding;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        activityHomeBinding= DataBindingUtil.setContentView(this,setContentView());
-    }
+public class HomeActivity extends BaseActivity {
+//    private Activit activityHomeBinding;
+//    @Override
+//    public void setContentView() {
+////        activityHomeBinding= DataBindingUtil.setContentView(this,R.layout.activity_home);
+//    }
 
-    public int setContentView() {
+    @Override
+    public int getContentView() {
         return R.layout.activity_home;
     }
 }

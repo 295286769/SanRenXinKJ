@@ -1,31 +1,36 @@
 package com.srx.huangweishui.homeproject.activity;
 
-import android.os.Bundle;
 
-import com.srx.huangweishui.common.BaseDataBinDingActivity;
-import com.srx.huangweishui.homeproject.BR;
+
+import com.alibaba.android.arouter.facade.annotation.Autowired;
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.srx.huangweishui.common.BaseActivity;
+import com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil;
 import com.srx.huangweishui.homeproject.R;
-import com.srx.huangweishui.homeproject.databinding.ActivityWellcomBinding;
-import com.srx.huangweishui.homeproject.model.WellComBean;
+
 
 /**
  * Created by huangweishui on 2018/8/24.
  */
+@Route(path = ActivityConstantPathJavaUtil.STARTKOTLINACTIVITY)
+public class WellComActivity extends BaseActivity {
+//private ActivityWellcomBinding activityWellcomBinding;
+//    @Autowired
+//     String name;
 
-public class WellComActivity extends BaseDataBinDingActivity<ActivityWellcomBinding,WellComBean> {
+//    @Override
+//    public void setContentView() {
+//        activityWellcomBinding= DataBindingUtil.setContentView(this,R.layout.activity_wellcom);
+//    }
 
     @Override
-    public int getLayoutId(Bundle savedInstanceState) {
+    public int getContentView() {
         return R.layout.activity_wellcom;
     }
 
     @Override
-    public int setVariableId() {
-        return BR.wellComBean;
-    }
-
-    @Override
-    public WellComBean setViewModel() {
-        return new WellComBean("欢迎");
+    public void initData() {
+        super.initData();
+//        activityWellcomBinding.tvContent.setText("欢迎光临");
     }
 }

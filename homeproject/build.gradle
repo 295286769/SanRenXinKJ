@@ -5,7 +5,7 @@ if(isModule.toBoolean()){
 }else {
     apply plugin: 'com.android.library'
 }
-//apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android'
 //apply plugin: 'kotlin-android-extensions'
 //apply plugin: 'kotlin-kapt'//kapt 插件
 android {
@@ -43,9 +43,9 @@ android {
             }
         }
     }
-    dataBinding {
-        enabled = true
-    }
+//    dataBinding {
+//        enabled = true
+//    }
 }
 //kapt {
 //    generateStubs = true
@@ -57,19 +57,13 @@ android {
 
 
 dependencies {
-//    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
-    compile project(':common')
-//    kapt rootProject.ext.dependencies["arouter-compiler"]
-//    kapt rootProject.ext.dependencies["compiler"]
-//    compile fileTree(dir: 'libs', include: ['*.jar'])
-//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-//        exclude group: 'com.android.support', module: 'support-annotations'
-//    })
-//    compile 'com.android.support:appcompat-v7:27.+'
     testCompile 'junit:junit:4.12'
-}
+    compile project(':common')
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 //task clean(type: Exec) {
 //    ext.lockhunter = '\"C:\\LockHunter.exe\"'
 //    def buildDir = file(new File("build"))
 //    commandLine 'cmd', "$lockhunter", '/delete', '/silent', buildDir
 //}
+}
+

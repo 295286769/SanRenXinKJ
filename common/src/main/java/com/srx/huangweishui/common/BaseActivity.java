@@ -1,5 +1,6 @@
 package com.srx.huangweishui.common;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,23 +10,26 @@ import android.support.v7.app.AppCompatActivity;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
+    private Context mContext;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getContentView());
+        mContext=this;
         initData();
         initView();
         initRequest();
     }
 
-    public abstract int setContentView();
+    public abstract int getContentView();
 
-    private void initRequest() {
+    public void initRequest() {
 
     }
 
-    private void initView() {
+    public void initView() {
     }
 
-    private void initData() {
+    public void initData() {
     }
 }
