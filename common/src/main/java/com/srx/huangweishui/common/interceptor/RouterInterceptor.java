@@ -6,15 +6,17 @@ import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.annotation.Interceptor;
 import com.alibaba.android.arouter.facade.callback.InterceptorCallback;
 import com.alibaba.android.arouter.facade.template.IInterceptor;
+import com.srx.huangweishui.common.utils.Logger;
 import com.srx.huangweishui.common.utils.ToasterManager;
 
 /**
  * Created by huangweishui on 2018/8/27.
  */
-@Interceptor(name = "测试拦截",priority = 8)
+@Interceptor(priority = 2)
 public class RouterInterceptor implements IInterceptor {
     @Override
     public void process(Postcard postcard, InterceptorCallback callback) {
+        Logger.i("TTT","extras+"+postcard.getExtra());
 //        if(postcard.getPath().contains(ARouterPath.GirlsListAty)){
 //
 //            //自定义处理

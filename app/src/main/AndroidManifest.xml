@@ -21,6 +21,18 @@
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:screenOrientation="portrait" />
         <activity
+        android:name="com.srx.huangweishui.common.activity.SchemeCommonActivity"
+        android:launchMode="singleTop"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait" >
+            <intent-filter>
+                <data android:scheme="arouter" android:host="com.srx.huangweishui" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
         android:name="com.srx.huangweishui.sanrenxinkj.activity.TestActivity"
         android:launchMode="singleTop"
         android:configChanges="keyboardHidden|orientation|screenSize"
@@ -39,7 +51,7 @@
             <!--android:name="com.srx.huangweishui.common.WebActivity"-->
             <!--android:launchMode="singleTop"-->
             <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
-            <!--android:screenOrientation="portrait" />-->portrait
+            <!--android:screenOrientation="portrait" />-->
     </application>
 
 </manifest>

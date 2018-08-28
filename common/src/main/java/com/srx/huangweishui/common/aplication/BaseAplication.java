@@ -9,14 +9,12 @@ import android.app.Application;
 public class BaseAplication extends Application {
     private static BaseAplication aplication;
     public static BaseAplication getIntence(){
-        if(aplication==null){
-            aplication=new BaseAplication();
-        }
         return aplication;
     }
     @Override
     public void onCreate() {
         super.onCreate();
+        aplication=this;
         initData();
     }
 

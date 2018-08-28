@@ -34,7 +34,7 @@ public class AppActivity extends BaseActivity {
                     AppActivity.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            StartActivityJavaUtil.startMineActivity("皇上");
+                            StartActivityJavaUtil.startMineActivity(mContext,"皇上");
                         }
                     });
 

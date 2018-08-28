@@ -7,5 +7,6 @@ package com.srx.huangweishui.common.utils
     //实质上经过const修饰的常量，才是java中理解的常量
      companion object{
          const  val STARTKOTLINACTIVITY :String="/homeproject/WellComActivity"
+         const  val HOMEACTIVITY :String="/homeproject/HomeActivity"
     }
 }
