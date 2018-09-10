@@ -9,10 +9,12 @@ import com.alibaba.android.arouter.facade.template.IInterceptor;
 import com.srx.huangweishui.common.utils.Logger;
 import com.srx.huangweishui.common.utils.ToasterManager;
 
+import static com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil.MINEACTIVITY;
+
 /**
  * Created by huangweishui on 2018/8/27.
  */
-@Interceptor(priority = 2)
+@Interceptor(priority = 2,name = MINEACTIVITY)
 public class RouterInterceptor implements IInterceptor {
     @Override
     public void process(Postcard postcard, InterceptorCallback callback) {

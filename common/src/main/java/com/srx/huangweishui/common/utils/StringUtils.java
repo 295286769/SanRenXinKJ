@@ -275,14 +275,15 @@ public class StringUtils {
 
     /**
      * 使用java正则表达式去掉多余的.与0
+     *
      * @param s
      * @return
      */
-    public static String subZeroAndDot(String s){
-        if(s==null || s.length()==0){
+    public static String subZeroAndDot(String s) {
+        if (s == null || s.length() == 0) {
             return "";
         }
-        if(s.indexOf(".") > 0){
+        if (s.indexOf(".") > 0) {
             s = s.replaceAll("0+?$", "");//去掉多余的0
             s = s.replaceAll("[.]$", "");//如最后一位是.则去掉
         }
@@ -354,6 +355,7 @@ public class StringUtils {
     /**
      * 是否是6-18位密码
      * 含有数字或者字母
+     *
      * @param password
      * @return
      */
@@ -370,34 +372,35 @@ public class StringUtils {
      * 非空
      * 全部中文 没有空格
      * 全部英文 中间至少含有一个空格
+     *
      * @param name
      * @return
      */
     public static boolean isName(String name) {
-        name=name.trim();
-      if(StringUtils.isBlank(name)){
-          ToasterManager.showToast("请输入姓名");
-          return false;
-      }
+        name = name.trim();
+        if (StringUtils.isBlank(name)) {
+            ToasterManager.showToast("请输入姓名");
+            return false;
+        }
         //判断字符串是否全为汉字
-        String reg = "[\\u4e00-\\u9fa5]+"  ;
+        String reg = "[\\u4e00-\\u9fa5]+";
         boolean result1 = name.matches(reg);
-        if(result1){
+        if (result1) {
             //全部为汉字
             return true;
-        }else{
-            String name2=name.replace(" ","");
-            boolean isWord=name2.matches("[a-zA-Z]+");
-            if(isWord){
+        } else {
+            String name2 = name.replace(" ", "");
+            boolean isWord = name2.matches("[a-zA-Z]+");
+            if (isWord) {
                 //全部字母
-                if(name.contains(" ") && !name.startsWith(" ")&& !name.endsWith(" ")){
+                if (name.contains(" ") && !name.startsWith(" ") && !name.endsWith(" ")) {
                     // 中间含有空格
                     return true;
-                }else{
+                } else {
                     ToasterManager.showToast("英文名时，请在姓和名之前输入一个空格");
                     return false;
                 }
-            }else{
+            } else {
                 //不全部是汉字也不全部是字母
                 ToasterManager.showToast("姓和名必须中英文统一");
                 return false;
@@ -409,18 +412,20 @@ public class StringUtils {
 
     /**
      * 是否全部是数字
+     *
      * @param str
      * @return
      */
-    public static boolean isNumeric(String str){
-        for (int i = 0; i < str.length(); i++){
+    public static boolean isNumeric(String str) {
+        for (int i = 0; i < str.length(); i++) {
             System.out.println(str.charAt(i));
-            if (!Character.isDigit(str.charAt(i))){
+            if (!Character.isDigit(str.charAt(i))) {
                 return false;
             }
         }
         return true;
     }
+
     // 判断一个字符串是否含有数字
     public static boolean HasDigit(String content) {
         boolean flag = false;
@@ -431,8 +436,10 @@ public class StringUtils {
         }
         return flag;
     }
+
     /**
      * 是否含有字母
+     *
      * @return
      */
     public static boolean HasLetter(String password) {
@@ -459,6 +466,7 @@ public class StringUtils {
         if (TextUtils.isEmpty(mobiles)) return false;
         else return mobiles.matches(telRegex);
     }
+
     //判断字符串是否是整数
     public static boolean isInteger(String str) {
         if (null == str || "".equals(str)) {
@@ -469,11 +477,10 @@ public class StringUtils {
     }
 
 
-
-
     //json格式化
+
     /**
-     * @date  2017/8/24
+     * @date 2017/8/24
      * @description 将字符串格式化成JSON的格式
      */
     public static String stringToJSON(String strJson) {
@@ -489,47 +496,40 @@ public class StringUtils {
                 tabNum++;
                 jsonFormat.append(c + "\n");
                 jsonFormat.append(getSpaceOrTab(tabNum));
-            }
-            else if (c == '}') {
+            } else if (c == '}') {
                 tabNum--;
                 jsonFormat.append("\n");
                 jsonFormat.append(getSpaceOrTab(tabNum));
                 jsonFormat.append(c);
-            }
-            else if (c == ',') {
+            } else if (c == ',') {
                 jsonFormat.append(c + "\n");
                 jsonFormat.append(getSpaceOrTab(tabNum));
-            }
-            else if (c == ':') {
+            } else if (c == ':') {
                 jsonFormat.append(c + " ");
-            }
-            else if (c == '[') {
+            } else if (c == '[') {
                 tabNum++;
                 char next = strJson.charAt(i + 1);
                 if (next == ']') {
                     jsonFormat.append(c);
-                }
-                else {
+                } else {
                     jsonFormat.append(c + "\n");
                     jsonFormat.append(getSpaceOrTab(tabNum));
                 }
-            }
-            else if (c == ']') {
+            } else if (c == ']') {
                 tabNum--;
                 if (last == '[') {
                     jsonFormat.append(c);
-                }
-                else {
+                } else {
                     jsonFormat.append("\n" + getSpaceOrTab(tabNum) + c);
                 }
-            }
-            else {
+            } else {
                 jsonFormat.append(c);
             }
             last = c;
         }
         return jsonFormat.toString();
     }
+
     private static String getSpaceOrTab(int tabNum) {
         StringBuffer sbTab = new StringBuffer();
         for (int i = 0; i < tabNum; i++) {
@@ -537,6 +537,7 @@ public class StringUtils {
         }
         return sbTab.toString();
     }
+
     public static String getMd5(String string) {
         if (TextUtils.isEmpty(string)) {
             return "";
@@ -558,5 +559,34 @@ public class StringUtils {
             e.printStackTrace();
         }
         return "";
+    }
+
+    /**
+     * md5编码
+     * @param key
+     * @return
+     */
+    public static String hashKeyForDisk(String key) {
+        String cacheKey;
+        try {
+            final MessageDigest mDigest = MessageDigest.getInstance("MD5");
+            mDigest.update(key.getBytes());
+            cacheKey = bytesToHexString(mDigest.digest());
+        } catch (NoSuchAlgorithmException e) {
+            cacheKey = String.valueOf(key.hashCode());
+        }
+        return cacheKey;
+    }
+
+    private static String bytesToHexString(byte[] bytes) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < bytes.length; i++) {
+            String hex = Integer.toHexString(0xFF & bytes[i]);
+            if (hex.length() == 1) {
+                sb.append('0');
+            }
+            sb.append(hex);
+        }
+        return sb.toString();
     }
 }
