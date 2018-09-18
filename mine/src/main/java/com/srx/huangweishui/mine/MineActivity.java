@@ -1,6 +1,7 @@
 package com.srx.huangweishui.mine;
 
 import android.content.Context;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -8,10 +9,15 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.srx.huangweishui.common.BaseActivity;
+import com.srx.huangweishui.common.config.GenericController;
+import com.srx.huangweishui.common.config.LooperThread;
+import com.srx.huangweishui.common.inteface.ChangeUi;
 import com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil;
 import com.srx.huangweishui.common.utils.ImageLoderUtil;
 import com.srx.huangweishui.common.utils.Logger;
 import com.srx.huangweishui.mine.controller.MinController;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.lang.ref.SoftReference;
 import java.util.ArrayList;
@@ -21,7 +27,7 @@ import java.util.List;
  * Created by huangweishui on 2018/8/27.
  */
 @Route(path = ActivityConstantPathJavaUtil.MINEACTIVITY, extras = 1)
-public class MineActivity extends BaseActivity {
+public  class MineActivity extends BaseActivity implements View.OnClickListener,ChangeUi<String>{
     @Autowired
     String name;
 
@@ -29,6 +35,7 @@ public class MineActivity extends BaseActivity {
     private ImageView img_icon;
     private ImageView img_url;
     private MinController minController;
+    private LooperThread looperThread;
 
     @Override
     public int getContentView() {
@@ -38,7 +45,8 @@ public class MineActivity extends BaseActivity {
     @Override
     public void initData() {
         super.initData();
-        minController=new MinController(this);
+        minController = new MinController(this);
+        looperThread=new LooperThread(this);
     }
 
     @Override
@@ -50,14 +58,14 @@ public class MineActivity extends BaseActivity {
         img_url = (ImageView) findViewById(R.id.img_url);
         textView.setText(name);
         Logger.i("TTT", "name" + name);
-        ImageLoderUtil.loadImage(R.drawable.icon_driver,img_icon);
-        String url="http://avis-img.oss-cn-shanghai.aliyuncs.com/chauffeur/head/c79ab6a702ef981097fbbd0a869596f5.png?x-oss-process=image/resize,m_pad,h_330,w_390";
-        ImageLoderUtil.loadCircleImage(url,img_url);
-
-
+        ImageLoderUtil.loadImage(R.drawable.icon_driver, img_icon);
+        String url = "http://avis-img.oss-cn-shanghai.aliyuncs.com/chauffeur/head/c79ab6a702ef981097fbbd0a869596f5.png?x-oss-process=image/resize,m_pad,h_330,w_390";
+        ImageLoderUtil.loadCircleImage(url, img_url);
+        looperThread.start();
+        new GenericController<String>().setName("");
     }
 
-    String gage ="";
+    String gage = "";
     private List<Integer> integers = new ArrayList<>();
 
     @Override
@@ -66,6 +74,7 @@ public class MineActivity extends BaseActivity {
         minController.setMy();
         minController.setYours();
         integers.clear();
+        onPress();
         for (int i = 0; i < 10; i++) {
 //                new TestThread(i + "").start();
 
@@ -87,12 +96,27 @@ public class MineActivity extends BaseActivity {
 
     }
 
+    private void onPress() {
+        textView.setOnClickListener(this);
+        looperThread.setChangeUi(this);
+    }
+
     public synchronized void getAge() {
 //        synchronized (integers){
         Logger.i("TTT", "Thread_1" + gage);
 
 //        }
 
+    }
+
+    @Override
+    public void onClick(View view) {
+
+    }
+
+    @Override
+    public void changeUi(@Nullable String content) {
+        textView.setText(content);
     }
 
     class TestThread extends Thread {
@@ -106,8 +130,8 @@ public class MineActivity extends BaseActivity {
         @Override
         public void run() {
             super.run();
-            synchronized (this){
-                gage=position;
+            synchronized (this) {
+                gage = position;
                 Logger.i("TTT", "Thread_1" + gage);
             }
         }

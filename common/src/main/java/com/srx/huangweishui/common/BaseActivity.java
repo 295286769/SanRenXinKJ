@@ -13,16 +13,33 @@ import com.alibaba.android.arouter.launcher.ARouter;
 
 public abstract class BaseActivity extends AppCompatActivity {
     public Context mContext;
+    private boolean isInjectArouter=true;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setAppThem();
         super.onCreate(savedInstanceState);
-        setContentView(getContentView());
+        try {
+            setContentView(getContentView());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         mContext=this;
-        injectArouter();
+        initIsInjectArouter();
+        if(isInjectArouter){
+            injectArouter();
+        }
         initData();
         initView();
         initRequest();
     }
+
+    protected  void setAppThem(){
+
+    };
+
+    protected  void initIsInjectArouter(){
+
+    };
 
     public abstract int getContentView();
     private void injectArouter(){
@@ -37,5 +54,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void initData() {
+    }
+
+    public void setIsInjectArouter(boolean isInjectArouter) {
+        this.isInjectArouter = isInjectArouter;
     }
 }

@@ -9,13 +9,18 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.request.target.ViewTarget;
 import com.srx.huangweishui.common.R;
 import com.srx.huangweishui.common.aplication.BaseAplication;
 import com.srx.huangweishui.common.config.CircleCrop;
+import com.srx.huangweishui.common.config.GlidProgressInterceptor;
 import com.srx.huangweishui.common.config.MyGlideUrl;
+import com.srx.huangweishui.common.inteface.ProgressListener;
 import com.srx.huangweishui.common.view.BaseLineaLayout;
 
 /**
@@ -60,5 +65,34 @@ public class ImageLoderUtil {
      */
     public static void loadCustomView(String url, BaseLineaLayout view) {
         Glide.with(BaseAplication.getIntence()).load(new MyGlideUrl(url)).centerCrop().into(view.getViewTarget());
+    }
+
+    /**
+     * 带进度的加载
+     * @param url
+     * @param imageView
+     */
+    public static void loadViewAsLoading(String url, ImageView imageView) {
+        GlidProgressInterceptor.addListener(url, new ProgressListener() {
+            @Override
+            public void onProgress(int progress) {
+                //进度
+            }
+        });
+
+        Glide.with(BaseAplication.getIntence()).load(new MyGlideUrl(url)).into(new GlideDrawableImageViewTarget(imageView){
+            @Override
+            public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> animation) {
+                super.onResourceReady(resource, animation);
+                //结束
+
+            }
+
+            @Override
+            public void onStart() {
+                super.onStart();
+                //开始
+            }
+        });
     }
 }
