@@ -1,1 +1,1 @@
-include ':app', ':common', ':homeproject', ':mine'
+include ':app', ':common', ':homeproject', ':mine', ':main'

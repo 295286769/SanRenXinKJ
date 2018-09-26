@@ -4,4 +4,15 @@
     <color name="commonColorPrimary">#3F51B5</color>
     <color name="commonColorPrimaryDark">#303F9F</color>
     <color name="commonColorAccent">#FF4081</color>
+    <color name="base_line_color">#ededed</color>
+    <color name="sencond_text_color">#808080</color>
+    <color name="button_text_color_red">#ff5a60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="default_font_categary_color">#FF5A60</color>
+    <!--进度条-->
+    <color name="base_progress_gradient_center_color">#E3E3E3</color>
+    <color name="base_progress_gradient_endColor_color">#E6E6E6</color>
+    <color name="base_progress_gradient_startColor_color">#C8C8C8</color>
+    <color name="v3_common_green">#1FBC8E</color>
+    <color name="v3_common_blue">#4D94F1</color>
 </resources>

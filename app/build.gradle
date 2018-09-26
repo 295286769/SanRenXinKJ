@@ -43,6 +43,7 @@ dependencies {
     } else {
         compile project(':homeproject')
         compile project(':mine')
+        compile project(':main')
     }
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 

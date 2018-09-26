@@ -1,13 +1,11 @@
-package com.srx.huangweishui.sanrenxinkj.activity;
+package com.srx.huangweishui.main.activity;
 
 import android.os.Bundle;
 import android.os.Debug;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.srx.huangweishui.common.BaseActivity;
 import com.srx.huangweishui.common.utils.StartActivityJavaUtil;
-import com.srx.huangweishui.sanrenxinkj.R;
 
 /**
  * Created by huangweishui on 2018/8/23.
@@ -36,12 +34,10 @@ public class AppActivity extends AppCompatActivity {
                     AppActivity.this.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            StartActivityJavaUtil.startMineActivity(AppActivity.this,"皇上");
+                            StartActivityJavaUtil.startHomeActivity("黄尚");
                         }
                     });
 
-//                    Intent intent=new Intent(AppActivity.this, WellComActivity.class);
-//                    startActivity(intent);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

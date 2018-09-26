@@ -20,20 +20,20 @@ class HandlerController {
 
     fun post(): Unit {
 
-            handler?.post(object :Runnable{
+            handler.post(object :Runnable{
                 override fun run() {
                     var message:Message=Message.obtain()
-                    handler?.sendMessage(message)
+                    handler.sendMessage(message)
                 }
             })
 
     }
    fun senMessage(){
        var message:Message=Message.obtain()
-       handler?.sendMessage(message)
+       handler.sendMessage(message)
    }
 
     fun clearHandler(): Unit {
-            handler?.removeCallbacksAndMessages(null)
+            handler.removeCallbacksAndMessages(null)
     }
 }

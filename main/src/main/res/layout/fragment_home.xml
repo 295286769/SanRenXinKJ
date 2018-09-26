@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:srx="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.srx.huangweishui.common.view.BaseWebViewLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/baseWebViewLayout"
+        srx:base_pregress_isvisible="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/tv_content"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_icon"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_url"/>
+    <ViewStub
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewStub"
+        android:layout="@layout/base_activity_emty_view"
+        android:inflatedId="@+id/emty_view_id"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

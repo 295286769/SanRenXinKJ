@@ -1,7 +1,14 @@
 package com.srx.huangweishui.mine;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewStub;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -9,16 +16,26 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.srx.huangweishui.common.BaseActivity;
+import com.srx.huangweishui.common.aplication.BaseAplication;
 import com.srx.huangweishui.common.config.GenericController;
 import com.srx.huangweishui.common.config.LooperThread;
+import com.srx.huangweishui.common.controller.ThreadTroller;
 import com.srx.huangweishui.common.inteface.ChangeUi;
+import com.srx.huangweishui.common.inteface.ObjectCallBack;
+import com.srx.huangweishui.common.model.JavaScriptObject;
 import com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil;
 import com.srx.huangweishui.common.utils.ImageLoderUtil;
 import com.srx.huangweishui.common.utils.Logger;
+import com.srx.huangweishui.common.utils.NetworkUtils;
+import com.srx.huangweishui.common.view.BaseWebViewLayout;
+import com.srx.huangweishui.common.wiget.BaseWebViewClient;
 import com.srx.huangweishui.mine.controller.MinController;
 
 import org.jetbrains.annotations.Nullable;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.lang.ref.SoftReference;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,8 +51,14 @@ public  class MineActivity extends BaseActivity implements View.OnClickListener,
     private TextView textView;
     private ImageView img_icon;
     private ImageView img_url;
+    private ViewStub viewStub;
+    private BaseWebViewLayout baseWebViewLayout;
+    private View view_data;
     private MinController minController;
     private LooperThread looperThread;
+    private ThreadTroller threadTroller;
+
+    private volatile int total=0;
 
     @Override
     public int getContentView() {
@@ -47,6 +70,7 @@ public  class MineActivity extends BaseActivity implements View.OnClickListener,
         super.initData();
         minController = new MinController(this);
         looperThread=new LooperThread(this);
+        threadTroller=new ThreadTroller(this);
     }
 
     @Override
@@ -56,13 +80,31 @@ public  class MineActivity extends BaseActivity implements View.OnClickListener,
         textView = (TextView) findViewById(R.id.tv_content);
         img_icon = (ImageView) findViewById(R.id.img_icon);
         img_url = (ImageView) findViewById(R.id.img_url);
+        viewStub = (ViewStub) findViewById(R.id.viewStub);
+        baseWebViewLayout = (BaseWebViewLayout) findViewById(R.id.baseWebViewLayout);
         textView.setText(name);
         Logger.i("TTT", "name" + name);
         ImageLoderUtil.loadImage(R.drawable.icon_driver, img_icon);
         String url = "http://avis-img.oss-cn-shanghai.aliyuncs.com/chauffeur/head/c79ab6a702ef981097fbbd0a869596f5.png?x-oss-process=image/resize,m_pad,h_330,w_390";
         ImageLoderUtil.loadCircleImage(url, img_url);
-        looperThread.start();
+//        looperThread.start();
         new GenericController<String>().setName("");
+        threadTroller.excut();
+        if(viewStub!=null){
+            view_data=viewStub.inflate();
+        }
+        if(view_data==null){
+            view_data=findViewById(R.id.emty_view_id);
+        }
+        if(view_data!=null){
+            view_data.setVisibility(View.VISIBLE);
+        }
+        baseWebViewLayout.setJSInterface(JavaScriptObject.JSTOANDROIDNAME);
+//        baseWebViewLayout.loadUrl("file:///android_asset/javascript.html");
+        baseWebViewLayout.loadUrl("http://html.avis.cn/cms/app/1531210557/1531210557002026.html");
+        baseWebViewLayout.setWebChromeClient(new WebChromeClient());
+       baseWebViewLayout.setWebViewClient(new BaseWebViewClient());
+
     }
 
     String gage = "";
@@ -111,6 +153,13 @@ public  class MineActivity extends BaseActivity implements View.OnClickListener,
 
     @Override
     public void onClick(View view) {
+        baseWebViewLayout.evaluateJavascript(JavaScriptObject.JSMETH,new ObjectCallBack<String>() {
+            @Override
+            public void sussece(String s) {
+                view_data.setVisibility(View.GONE);
+                textView.setText(s);
+            }
+        });
 
     }
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_height">40dp</dimen>
+    <!-- 通用字体大小 -->
+    <dimen name="text_size1sp">1sp</dimen>
+    <dimen name="text_size2sp">2sp</dimen>
+    <dimen name="text_size5sp">5sp</dimen>
+    <dimen name="text_size8sp">8sp</dimen>
+    <dimen name="text_size10sp">10sp</dimen>
+    <dimen name="text_size11sp">11sp</dimen>
+    <dimen name="text_size12sp">12sp</dimen>
+    <dimen name="text_size13sp">13sp</dimen>
+    <dimen name="text_size14sp">14sp</dimen>
+    <dimen name="text_size15sp">15sp</dimen>
+    <dimen name="text_size16sp">16sp</dimen>
+    <dimen name="text_size17sp">17sp</dimen>
+    <dimen name="text_size18sp">18sp</dimen>
+    <dimen name="text_size19sp">19sp</dimen>
+    <dimen name="text_size20sp">20sp</dimen>
+    <dimen name="text_size21sp">21sp</dimen>
+    <dimen name="text_size22sp">22sp</dimen>
+    <dimen name="text_size23sp">23sp</dimen>
+    <dimen name="text_size24sp">24sp</dimen>
+    <dimen name="text_size25sp">25sp</dimen>
+    <dimen name="text_size28sp">28sp</dimen>
+    <dimen name="text_size30sp">30sp</dimen>
+</resources>

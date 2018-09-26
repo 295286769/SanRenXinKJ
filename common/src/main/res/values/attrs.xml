@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="baseWebViewLayout">
+        <attr name="base_pregress_isvisible" format="boolean" />
+        <attr name="base_pregress_color" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="LineView">
+        <attr name="line_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="homeTabView">
+        <attr name="text_select_color" format="reference|color"></attr>
+        <attr name="item_text_size" format="dimension"></attr>
+        <attr name="item_size" format="integer"></attr>
+        <attr name="item_one_text" format="string"></attr>
+        <attr name="item_two_text" format="string"></attr>
+        <attr name="item_three_text" format="string"></attr>
+        <attr name="item_four_text" format="string"></attr>
+        <attr name="item_one_visble" format="boolean"></attr>
+        <attr name="item_two_visble" format="boolean"></attr>
+        <attr name="item_three_visble" format="boolean"></attr>
+        <attr name="item_four_visble" format="boolean"></attr>
+    </declare-styleable>
+</resources>

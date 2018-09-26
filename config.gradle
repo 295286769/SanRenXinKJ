@@ -1,6 +1,14 @@
 ext{
+    appcompat_v7_version="25.+"
     kotlin_version="1.1.2"
     gradle_version="2.3.0"
+    okhttp3_version="3.9.0"
+    okhttp3_integration_version="1.5.0@aar"
+    glide_version="3.7.0"
+    glide_transformations_version="2.0.2"
+    gson_version="2.6.2"
+    arouter_compiler_version="1.2.1"
+    arouter_api_version="1.4.0"
     android=[
             compileSdkVersion: 25,        //compileSdkVersion 26
             buildToolsVersion: "25.0.2",  //buildToolsVersion "25.0.2"
@@ -10,10 +18,15 @@ ext{
             versionName: "1.0.0.0"            //versionName "1.0"
     ]
     dependencies=[
-            "appcompat-v7" : 'com.android.support:appcompat-v7:25.+',
+            "appcompat-v7" : "com.android.support:appcompat-v7:$appcompat_v7_version",
             "kotlin-stdlib" :"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
             "compiler" :"com.android.databinding:compiler:$gradle_version",////这里的版本对应gradle的版本
-            "arouter-api" :"com.alibaba:arouter-api:1.4.0",
-            "arouter-compiler" :"com.alibaba:arouter-compiler:1.2.1"
+            "arouter-api" :"com.alibaba:arouter-api:$arouter_api_version",
+            "arouter-compiler" :"com.alibaba:arouter-compiler:$arouter_compiler_version",
+            "gson" :"com.google.code.gson:gson:$gson_version",
+            "glide" :"com.github.bumptech.glide:glide:$glide_version",
+            "glide-transformations" :"jp.wasabeef:glide-transformations:$glide_transformations_version",
+            "okhttp3-integration" :"com.github.bumptech.glide:okhttp3-integration:$okhttp3_integration_version",
+            "okhttp3" :"com.squareup.okhttp3:okhttp:$okhttp3_version"
     ]
 }

@@ -26,6 +26,10 @@ public class StartActivityJavaUtil {
 
             ARouter.getInstance().build(ActivityConstantPathJavaUtil.WEBACTIVITY).withString("name",userName).navigation();
     }
+    public static void startHomeActivity(String userName){
+
+            ARouter.getInstance().build(ActivityConstantPathJavaUtil.HOMEACTIVITY).withString("name",userName).navigation();
+    }
     public static void startMineActivity(Context context,String userName){
 
             ARouter.getInstance().build(ActivityConstantPathJavaUtil.MINEACTIVITY).withString("name",userName).navigation(context, new NavigationCallback() {
