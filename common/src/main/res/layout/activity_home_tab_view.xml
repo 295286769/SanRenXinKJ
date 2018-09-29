@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:avis="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    android:id="@+id/ll_tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.srx.huangweishui.common.view.LineView
+        android:id="@+id/line_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        avis:line_color="@color/default_font_categary_color" />
 
     <RadioGroup
         android:id="@+id/radiogroup_main"
         android:layout_width="match_parent"
         android:layout_height="@dimen/button_height"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:background="@drawable/home_tab_bagroud"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/rb_pick_airport"
@@ -25,7 +30,7 @@
             android:gravity="center"
             android:text=""
             android:textColor="@color/home_tab_text_color"
-            android:textSize="@dimen/text_size14sp"/>
+            android:textSize="@dimen/text_size14sp" />
 
         <RadioButton
             android:id="@+id/rb_send_airport"
@@ -36,7 +41,7 @@
             android:gravity="center"
             android:text=""
             android:textColor="@color/home_tab_text_color"
-            android:textSize="@dimen/text_size14sp"/>
+            android:textSize="@dimen/text_size14sp" />
 
         <RadioButton
             android:id="@+id/rb_point_to_point"
@@ -47,7 +52,7 @@
             android:gravity="center"
             android:text=""
             android:textColor="@color/home_tab_text_color"
-            android:textSize="@dimen/text_size14sp"/>
+            android:textSize="@dimen/text_size14sp" />
 
         <RadioButton
             android:id="@+id/rb_hartered"
@@ -58,7 +63,7 @@
             android:gravity="center"
             android:text=""
             android:textColor="@color/home_tab_text_color"
-            android:textSize="@dimen/text_size14sp"/>
+            android:textSize="@dimen/text_size14sp" />
 
     </RadioGroup>
 
@@ -66,14 +71,13 @@
         android:id="@+id/tv_tab_line"
         android:layout_width="30dp"
         android:layout_height="3dp"
-        android:background="@color/default_font_categary_color"
-        />
+        android:background="@color/default_font_categary_color" />
+
     <com.srx.huangweishui.common.view.LineView
+        android:id="@+id/lineView"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        avis:line_color="@color/default_font_categary_color"
-        android:id="@+id/lineView"
         android:visibility="gone"
-        />
+        avis:line_color="@color/default_font_categary_color" />
 
 </LinearLayout>

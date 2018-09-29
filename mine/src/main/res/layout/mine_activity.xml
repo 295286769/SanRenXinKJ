@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:srx="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/base_line_color"
     android:layout_height="match_parent">
+    <com.srx.huangweishui.common.view.HomeTabView
+        android:id="@+id/homeTabView_mine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_content_mine"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        srx:item_one_text="首页"
+        srx:item_two_text="第二页"
+        srx:item_three_text="第三页"
+        srx:item_four_text="第四页"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/fl_content_mine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/home_tab_bagroud"
+        android:clickable="true"
+
+        />
+    <!--<com.srx.huangweishui.common.view.BaseTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/baseTitleLayout"/>
     <com.srx.huangweishui.common.view.BaseWebViewLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,7 +60,7 @@
         android:layout="@layout/base_activity_emty_view"
         android:inflatedId="@+id/emty_view_id"
         android:layout_gravity="center"
-        />
+        />-->
 
 
-</LinearLayout>
+</RelativeLayout>

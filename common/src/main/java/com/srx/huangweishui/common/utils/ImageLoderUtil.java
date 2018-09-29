@@ -42,7 +42,7 @@ public class ImageLoderUtil {
 
     }
 
-    public static void loadImage(int drawableId, final ImageView imageView) {
+    public static void loadImageSource(int drawableId, final ImageView imageView) {
         Glide.with(BaseAplication.getIntence()).load(drawableId).asBitmap().diskCacheStrategy(DiskCacheStrategy.SOURCE).transform(new CircleCrop(BaseAplication.getIntence() ))
                 .override(BitmapImageViewTarget.SIZE_ORIGINAL, Target.SIZE_ORIGINAL).into(new BitmapImageViewTarget(imageView) {
             @Override
@@ -54,6 +54,10 @@ public class ImageLoderUtil {
                 imageView.setImageDrawable(circularBitmapDrawable);
             }
         });
+
+    }
+    public static void loadImage(int drawableId, final ImageView imageView) {
+        Glide.with(BaseAplication.getIntence()).load(drawableId).into(imageView);
 
     }
 

@@ -11,13 +11,12 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
-//        javaCompileOptions {
-//            annotationProcessorOptions {
-//                arguments = [AROUTER_MODULE_NAME: project.getName()]
-//            }
-//        }
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
 
     }
     buildTypes {
@@ -25,23 +24,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        lintOptions { abortOnError false }
     }
-//    packagingOptions {
-//        pickFirst "META-INF/*"
-//
-//    }
 }
 kapt {
     arguments {
         arg("AROUTER_MODULE_NAME", project.getName())
     }
-//    generateStubs = true
 }
 dependencies {
-    testCompile 'junit:junit:4.12'
-    compile project(':common')
-
+    testImplementation 'junit:junit:4.12'
+    api project(':common')
+    kapt rootProject.ext.dependencies["arouter-compiler"]
 //    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
-    kapt  rootProject.ext.dependencies["arouter-compiler"]
 }
+

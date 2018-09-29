@@ -9,10 +9,14 @@
     <color name="button_text_color_red">#ff5a60</color>
     <color name="white">#FFFFFF</color>
     <color name="default_font_categary_color">#FF5A60</color>
+    <color name="base_line_title_color">#e1e1e1</color>
+    <color name="base_context_color_ui">#333333</color>
+    <color name="base_background_color">#f6f6f6</color>
     <!--进度条-->
     <color name="base_progress_gradient_center_color">#E3E3E3</color>
     <color name="base_progress_gradient_endColor_color">#E6E6E6</color>
     <color name="base_progress_gradient_startColor_color">#C8C8C8</color>
     <color name="v3_common_green">#1FBC8E</color>
     <color name="v3_common_blue">#4D94F1</color>
+
 </resources>

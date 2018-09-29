@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:srx="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/tv_contnet_main"/>
+   <com.srx.huangweishui.common.view.HomeTabView
+       android:id="@+id/homeTabView_wellcom"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:layout_marginBottom="10dp"
+       android:clickable="true"
+       srx:item_one_text="首页"
+       srx:item_two_text="第二页"
+       srx:item_three_text="第三页"
+       srx:item_four_text="第四页"
+       />
+   <FrameLayout
+       android:id="@+id/fl_content_wellcom"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/homeTabView_wellcom"
+       android:background="@drawable/home_tab_bagroud"
+       android:clickable="true"
+
+       />
+
+   <!--<data>-->
+      <!--<variable-->
+          <!--name="wellComBean"-->
+          <!--type="com.srx.huangweishui.homeproject.model.WellComBean"/>-->
+   <!--</data>-->
+   <!--<LinearLayout-->
+       <!--android:layout_width="match_parent"-->
+       <!--android:layout_height="match_parent"-->
+       <!--android:orientation="vertical">-->
+      <!--<TextView-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent"-->
+          <!--android:gravity="center"-->
+          <!--android:id="@+id/tv_content"-->
+          <!--/>-->
+   <!--</LinearLayout>-->
+
+</RelativeLayout>

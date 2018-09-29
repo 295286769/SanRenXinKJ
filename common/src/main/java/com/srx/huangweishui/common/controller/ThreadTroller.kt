@@ -72,14 +72,12 @@ class ThreadTroller {
 
 
 
-        if(excouter!=null){
             excouter.scheduleWithFixedDelay(object :Runnable{
                 override fun run() {
 
                 }
 
             },1000,1000,TimeUnit.SECONDS)
-        }
 
     }
 

@@ -8,5 +8,8 @@ package com.srx.huangweishui.common.utils
      companion object{
          const  val STARTKOTLINACTIVITY :String="/homeproject/WellComActivity"
          const  val HOMEACTIVITY :String="/homeproject/HomeActivity"
+        //fragment
+        const  val HOMEFRAGMENT:String="/main/HomeFragment"
+        const  val MINEFRAGMENT:String="/mine/MineFragment"
     }
 }

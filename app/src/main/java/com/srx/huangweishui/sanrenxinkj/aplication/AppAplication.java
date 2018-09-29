@@ -4,7 +4,7 @@ import android.os.Debug;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.srx.huangweishui.common.aplication.BaseAplication;
-import com.srx.huangweishui.common.utils.StartActivityJavaUtil;
+import com.srx.huangweishui.sanrenxinkj.BuildConfig;
 import com.srx.huangweishui.sanrenxinkj.server.StartServer;
 
 import static com.srx.huangweishui.sanrenxinkj.BuildConfig.isDebug;
@@ -20,7 +20,11 @@ public class AppAplication extends BaseAplication {
             Debug.startMethodTracing("myTracing");
         }
         super.initData();
-
-        StartServer.Companion.startServer(this);
+        if (BuildConfig.DEBUG) {
+            ARouter.openDebug();
+            ARouter.openLog();
+        }
+        ARouter.init(BaseAplication.getIntence());
+//        StartServer.Companion.startServer(BaseAplication.getIntence());
     }
 }

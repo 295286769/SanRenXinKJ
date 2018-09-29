@@ -9,7 +9,10 @@
     </declare-styleable>
     <declare-styleable name="homeTabView">
         <attr name="text_select_color" format="reference|color"></attr>
+        <attr name="base_line_view_top_color" format="reference|color"></attr>
         <attr name="item_text_size" format="dimension"></attr>
+        <attr name="marginright_size" format="dimension"></attr>
+        <attr name="marginleft_size" format="dimension"></attr>
         <attr name="item_size" format="integer"></attr>
         <attr name="item_one_text" format="string"></attr>
         <attr name="item_two_text" format="string"></attr>
@@ -19,5 +22,21 @@
         <attr name="item_two_visble" format="boolean"></attr>
         <attr name="item_three_visble" format="boolean"></attr>
         <attr name="item_four_visble" format="boolean"></attr>
+        <attr name="base_tab_line_visble" format="boolean"></attr>
+        <attr name="base_line_view_top_visible" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="base_title_layout_styeable_ui">
+        <attr name="base_title_content" format="string"></attr>
+        <attr name="base_title_color_ui" format="color"></attr>
+        <attr name="base_title_size_ui" format="dimension"></attr>
+        <attr name="base_title_left_return_ui" format="reference|integer"></attr>
+        <attr name="base_title_left_return_ui_visible" format="boolean"></attr>
+        <attr name="base_title_right_image_ui" format="reference|integer"></attr>
+        <attr name="base_title_right_image_ui_visible" format="boolean"></attr>
+        <attr name="base_title_right_second_image_ui" format="reference|integer"></attr>
+        <attr name="base_title_right_second_image_ui_visible" format="boolean"></attr>
+        <attr name="base_title_right_text_color" format="color"></attr>
+        <attr name="base_title_right_text_visible" format="boolean"></attr>
+        <attr name="base_title_right_text_size" format="dimension"></attr>
     </declare-styleable>
 </resources>

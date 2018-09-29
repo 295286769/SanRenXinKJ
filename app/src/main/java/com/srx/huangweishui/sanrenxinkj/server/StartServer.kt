@@ -1,15 +1,11 @@
 package com.srx.huangweishui.sanrenxinkj.server
 
-import android.app.Application
 import android.app.IntentService
 import android.content.Context
 import android.content.Intent
-import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
-import com.srx.huangweishui.common.BuildConfig
-import com.srx.huangweishui.common.aplication.BaseAplication
-import com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil
 import com.srx.huangweishui.common.utils.Logger
+import com.srx.huangweishui.sanrenxinkj.BuildConfig
 
 /**
  * Created by huangweishui on 2018/9/18.
@@ -32,6 +28,7 @@ class StartServer : IntentService {
             if (BuildConfig.DEBUG) {
                 ARouter.openDebug()
                 ARouter.openLog()
+                Logger.i("TTT","DEBUG成功")
             }
             Logger.i("TTT","启动server成功"+this.application)
             ARouter.init(this.application)

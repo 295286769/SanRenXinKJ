@@ -1,18 +1,17 @@
-package com.srx.huangweishui.homeproject.activity;
+package com.srx.huangweishui.main.activity;
 
 
 
-import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.srx.huangweishui.common.BaseActivity;
-import com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil;
-import com.srx.huangweishui.homeproject.R;
+import com.srx.huangweishui.main.R;
 
+import static com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil.WELLCOMACTIVITY;
 
 /**
  * Created by huangweishui on 2018/8/24.
  */
-@Route(path = ActivityConstantPathJavaUtil.STARTKOTLINACTIVITY)
+@Route(path = WELLCOMACTIVITY)
 public class WellComActivity extends BaseActivity {
 //private ActivityWellcomBinding activityWellcomBinding;
 //    @Autowired

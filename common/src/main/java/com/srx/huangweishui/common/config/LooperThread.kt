@@ -30,15 +30,15 @@ class LooperThread : Thread {
     }
     init {
         map.put("n", "dsds")
-        for ((key, value) in map) {
-            ToasterManager.showLongToast(value);
-        }
+//        for ((key, value) in map) {
+//            ToasterManager.showLongToast(value);
+//        }
         var name: String = map["n"] as String
         ToasterManager.showLongToast(name);
         a@ for (i in list.indices) {
             break@a
         }
-        var names= arrayOf("a",2)
+//        var names= arrayOf("a",2)
     }
 
 

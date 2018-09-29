@@ -24,4 +24,10 @@
     <dimen name="text_size25sp">25sp</dimen>
     <dimen name="text_size28sp">28sp</dimen>
     <dimen name="text_size30sp">30sp</dimen>
+
+    <dimen name="base_state_title_bar_height">25dp</dimen>
+    <dimen name="base_membership_item_pidding">37dp</dimen>
+    <dimen name="base_membership_item_pidding_27">27dp</dimen>
+    <dimen name="base_membership_item_pidding_20">20dp</dimen>
+    <dimen name="base_membership_item_line_pidding">28dp</dimen>
 </resources>

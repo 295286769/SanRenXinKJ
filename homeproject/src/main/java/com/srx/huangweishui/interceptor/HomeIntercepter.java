@@ -11,15 +11,16 @@ import com.srx.huangweishui.common.utils.Logger;
 /**
  * Created by huangweishui on 2018/8/30.
  */
-@Interceptor(priority = 3)
-public class HomeIntercepter implements IInterceptor {
-    @Override
-    public void process(Postcard postcard, InterceptorCallback callback) {
-        Logger.i("TTT","extras+"+postcard.getExtra());
-    }
-
-    @Override
-    public void init(Context context) {
-
-    }
-}
+//@Interceptor(priority = 3)
+//public class HomeIntercepter implements IInterceptor {
+//    @Override
+//    public void process(Postcard postcard, InterceptorCallback callback) {
+//        Logger.i("TTT","extras+"+postcard.getExtra());
+//        callback.onContinue(postcard);
+//    }
+//
+//    @Override
+//    public void init(Context context) {
+//
+//    }
+//}

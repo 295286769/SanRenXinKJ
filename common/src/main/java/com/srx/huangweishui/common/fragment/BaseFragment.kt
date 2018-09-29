@@ -12,7 +12,7 @@ import com.srx.huangweishui.common.R
  * Created by huangweishui on 2018/9/26.
  */
 abstract class BaseFragment :Fragment(){
-    var mContext:Context?=null;
+    open var mContext:Context?=null;
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         mContext=getActivity()
@@ -22,10 +22,10 @@ abstract class BaseFragment :Fragment(){
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-       var view:View?=getView();
+       var view:View?=getFragmentView();
         return view
     }
-     abstract fun getView( drawableId:Int): View?
+     abstract fun getFragmentView(): View?
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -6,8 +6,8 @@ if(isModule.toBoolean()){
     apply plugin: 'com.android.library'
 }
 apply plugin: 'kotlin-android'
-//apply plugin: 'kotlin-android-extensions'
-//apply plugin: 'kotlin-kapt'//kapt 插件
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -17,12 +17,12 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
     buildTypes {
@@ -47,19 +47,17 @@ android {
 //        enabled = true
 //    }
 }
+
 //kapt {
-//    generateStubs = true
 //    arguments {
 //        arg("AROUTER_MODULE_NAME", project.getName())
 //    }
-//
 //}
-
-
 dependencies {
-    testCompile 'junit:junit:4.12'
-    compile project(':common')
-    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    testImplementation 'junit:junit:4.12'
+    api project(':common')
+    kapt rootProject.ext.dependencies["arouter-compiler"]
+//    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 //task clean(type: Exec) {
 //    ext.lockhunter = '\"C:\\LockHunter.exe\"'
 //    def buildDir = file(new File("build"))

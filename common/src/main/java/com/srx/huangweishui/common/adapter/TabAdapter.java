@@ -1,4 +1,4 @@
-package com.srx.huangweishui.main.adapter;
+package com.srx.huangweishui.common.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;

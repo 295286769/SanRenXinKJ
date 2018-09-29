@@ -3,7 +3,6 @@
     package="com.srx.huangweishui.sanrenxinkj">
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- sd卡相关 -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
@@ -40,22 +39,32 @@
             </intent-filter>
         </activity>
         <activity
+        android:name="com.srx.huangweishui.main.activity.MainActivity"
+        android:launchMode="singleTop"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait" />
+        <activity
         android:name="com.srx.huangweishui.sanrenxinkj.activity.TestActivity"
         android:launchMode="singleTop"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:screenOrientation="portrait" />
         <activity
-        android:name="com.srx.huangweishui.main.activity.HomeActivity"
-        android:launchMode="singleTop"
-        android:configChanges="keyboardHidden|orientation|screenSize"
-        android:screenOrientation="portrait" />
-        <activity
-            android:name="com.srx.huangweishui.homeproject.activity.WellComActivity"
+            android:name="com.srx.huangweishui.main.activity.WellComActivity"
             android:launchMode="singleTop"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.srx.huangweishui.mine.MineActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.srx.huangweishui.mine.activity.AddActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.srx.huangweishui.homeproject.activity.HomeActivity"
             android:launchMode="singleTop"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait" />

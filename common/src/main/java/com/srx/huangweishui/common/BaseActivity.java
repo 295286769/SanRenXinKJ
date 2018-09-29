@@ -3,6 +3,7 @@ package com.srx.huangweishui.common;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -11,7 +12,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
  * Created by huangweishui on 2018/8/21.
  */
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends FragmentActivity {
     public Context mContext;
     private boolean isInjectArouter=true;
     @Override

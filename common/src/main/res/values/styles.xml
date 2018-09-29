@@ -9,4 +9,14 @@
     <style name="SplashTheme" parent="BaseAppTheme">
         <item name="android:windowBackground">@drawable/logo_splash</item>
     </style>
+    <style name="base_title_back_ui">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:src">@drawable/nav_icon_back</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">60dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
 </resources>

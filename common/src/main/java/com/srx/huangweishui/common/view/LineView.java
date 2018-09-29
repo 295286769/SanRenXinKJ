@@ -36,6 +36,12 @@ public class LineView extends View {
         paint.setAntiAlias(true);
         paint.setColor(color);
     }
+    public void setLineColor(int color){
+        if(paint!=null){
+            paint.setColor(color);
+            postInvalidate();
+        }
+    }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
