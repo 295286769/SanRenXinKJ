@@ -12,13 +12,18 @@ import com.srx.huangweishui.common.R
  * Created by huangweishui on 2018/9/26.
  */
 abstract class BaseFragment :Fragment(){
-    open var mContext:Context?=null;
+    open lateinit var mContext:Context;
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         mContext=getActivity()
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        initData()
+    }
+
+    open fun initData(){
+
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {

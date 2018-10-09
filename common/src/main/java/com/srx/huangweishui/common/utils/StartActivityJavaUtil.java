@@ -15,6 +15,7 @@ import static com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil.MAI
 import static com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil.MINEACTIVITY;
 import static com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil.WELLCOMACTIVITY;
 import static com.srx.huangweishui.common.utils.ActivityConstantPathUtil.HOMEFRAGMENT;
+import static com.srx.huangweishui.common.utils.ActivityConstantPathUtil.MINEFRAGMENT;
 
 
 /**
@@ -25,6 +26,9 @@ public class StartActivityJavaUtil {
     //fragment
     public static Fragment startHomeFragment(String userName){
        return (Fragment) ARouter.getInstance().build(HOMEFRAGMENT).withString("name",userName).navigation();
+    }
+    public static Fragment startMineFragment(String userName){
+       return (Fragment) ARouter.getInstance().build(MINEFRAGMENT).withString("name",userName).navigation();
     }
 
     //activity

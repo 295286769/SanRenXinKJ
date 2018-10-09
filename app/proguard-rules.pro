@@ -65,4 +65,11 @@
 # Application classes that will be serialized/deserialized over Gson 下面替换成自己的实体类
 -keep class com.example.bean.** { *; }
 
-
+-keep class com.chad.library.adapter.** {
+*;
+}
+-keep public class * extends com.chad.library.adapter.base.BaseQuickAdapter
+-keep public class * extends com.chad.library.adapter.base.BaseViewHolder
+-keepclassmembers  class **$** extends com.chad.library.adapter.base.BaseViewHolder {
+     <init>(...);
+}

@@ -9,7 +9,7 @@ package com.srx.huangweishui.common.utils
          const  val STARTKOTLINACTIVITY :String="/homeproject/WellComActivity"
          const  val HOMEACTIVITY :String="/homeproject/HomeActivity"
         //fragment
-        const  val HOMEFRAGMENT:String="/main/HomeFragment"
+        const  val HOMEFRAGMENT:String="/homeproject/HomeFragment"
         const  val MINEFRAGMENT:String="/mine/MineFragment"
     }
 }

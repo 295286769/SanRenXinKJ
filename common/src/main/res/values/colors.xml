@@ -7,7 +7,7 @@
     <color name="base_line_color">#ededed</color>
     <color name="sencond_text_color">#808080</color>
     <color name="button_text_color_red">#ff5a60</color>
-    <color name="white">#FFFFFF</color>
+    <color name="white">#ffffff</color>
     <color name="default_font_categary_color">#FF5A60</color>
     <color name="base_line_title_color">#e1e1e1</color>
     <color name="base_context_color_ui">#333333</color>

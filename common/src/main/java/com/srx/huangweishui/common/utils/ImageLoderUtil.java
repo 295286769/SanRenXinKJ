@@ -60,6 +60,10 @@ public class ImageLoderUtil {
         Glide.with(BaseAplication.getIntence()).load(drawableId).into(imageView);
 
     }
+    public static void loadImage(String url, final ImageView imageView) {
+        Glide.with(BaseAplication.getIntence()).load(url).into(imageView);
+
+    }
 
     /**
      * 自定义view显示图片

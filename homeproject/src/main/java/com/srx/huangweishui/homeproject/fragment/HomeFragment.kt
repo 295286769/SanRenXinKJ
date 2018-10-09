@@ -1,11 +1,12 @@
-package com.srx.huangweishui.main.fragment
+package com.srx.huangweishui.homeproject.fragment
 
 import android.view.View
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.srx.huangweishui.common.fragment.BaseFragment
 import com.srx.huangweishui.common.utils.ActivityConstantPathUtil.Companion.HOMEFRAGMENT
-import com.srx.huangweishui.main.R
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.srx.huangweishui.homeproject.R
+import kotlinx.android.synthetic.main.fragment_home.baseTitleLayout
+import kotlinx.android.synthetic.main.fragment_home.tv_content
 
 /**
  * Created by huangweishui on 2018/9/26.
@@ -24,7 +25,7 @@ class HomeFragment : BaseFragment(){
         super.initView()
         baseTitleLayout.setTitle("首页")
         tv_content.setText("法大师傅士大夫士大夫")
-//        tv_content.tv_content.setText("dfdsfs")
+        tv_content.setText("dfdsfs")
     }
 
 }

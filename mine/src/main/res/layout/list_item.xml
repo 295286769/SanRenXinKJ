@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:srx="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/base_background_color"
+    >
+
+
+  <android.support.v7.widget.CardView
+      android:id="@+id/cvListItem"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_margin="@dimen/mine_card_margin"
+      android:visibility="visible"
+      android:clickable="true"
+      android:foreground="?android:attr/selectableItemBackground"
+      android:stateListAnimator="@anim/touch_raise"
+      srx:cardPreventCornerOverlap="false"
+      srx:layout_constraintDimensionRatio="h,3:1"
+      srx:cardBackgroundColor="@color/white"
+      srx:cardCornerRadius="@dimen/dp_4"
+      srx:cardElevation="@dimen/dp_4"
+      srx:layout_constraintLeft_toLeftOf="parent"
+      srx:layout_constraintRight_toRightOf="parent"
+
+      srx:layout_constraintTop_toTopOf="parent"
+      >
+    <TextView
+        android:id="@+id/tv_mine_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="fhghghghg"
+        />
+    <ImageView
+        android:id="@+id/imgListItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/full_tank_oil"
+        android:scaleType="fitXY"
+        />
+  </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

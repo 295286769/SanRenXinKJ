@@ -1,4 +1,4 @@
-package com.srx.huangweishui.common.wiget
+package com.srx.huangweishui.common.widget
 
 import android.text.TextUtils
 import android.webkit.WebResourceRequest

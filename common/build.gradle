@@ -49,6 +49,10 @@ dependencies {
     api rootProject.ext.dependencies["constraint-layout"]
     api rootProject.ext.dependencies["design"]
     api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["cardview-v7"]
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    api rootProject.ext.dependencies["gridlayout-v7"]
+    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
 //    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
     kapt rootProject.ext.dependencies["arouter-compiler"]
 

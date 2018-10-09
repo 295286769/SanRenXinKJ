@@ -2,40 +2,19 @@ package com.srx.huangweishui.mine;
 
 import android.support.v4.app.Fragment;
 import android.view.View;
-import android.view.ViewStub;
-import android.webkit.WebChromeClient;
-import android.widget.ImageView;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
-import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.srx.huangweishui.common.BaseActivity;
 import com.srx.huangweishui.common.adapter.TabAdapter;
-import com.srx.huangweishui.common.aplication.BaseAplication;
-import com.srx.huangweishui.common.config.GenericController;
-import com.srx.huangweishui.common.config.LooperThread;
-import com.srx.huangweishui.common.controller.ThreadTroller;
 import com.srx.huangweishui.common.inteface.ChangeUi;
-import com.srx.huangweishui.common.inteface.ObjectCallBack;
-import com.srx.huangweishui.common.model.JavaScriptObject;
 import com.srx.huangweishui.common.utils.ActivityConstantPathJavaUtil;
-import com.srx.huangweishui.common.utils.ImageLoderUtil;
 import com.srx.huangweishui.common.utils.Logger;
-import com.srx.huangweishui.common.utils.NetworkUtils;
-import com.srx.huangweishui.common.view.BaseTitleLayout;
-import com.srx.huangweishui.common.view.BaseWebViewLayout;
 import com.srx.huangweishui.common.view.HomeTabView;
-import com.srx.huangweishui.common.wiget.BaseWebViewClient;
-import com.srx.huangweishui.mine.controller.MinController;
 import com.srx.huangweishui.mine.fragment.MineFragment;
 
 import org.jetbrains.annotations.Nullable;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.lang.ref.SoftReference;
 import java.util.ArrayList;
 import java.util.List;
 

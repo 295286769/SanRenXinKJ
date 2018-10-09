@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        android:textSize="@dimen/text_size15sp"
+        android:textColor="@color/sencond_text_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_background_color"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:visibility="visible"/>
+
+</LinearLayout>
