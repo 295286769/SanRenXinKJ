@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:srx="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.srx.huangweishui.common.view.BaseTitleLayout
+        android:id="@+id/baseTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        srx:base_title_left_return_ui_visible="false"
+        srx:layout_constraintLeft_toLeftOf="parent"
+        srx:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="sdvgggfg"
+        srx:layout_constraintHorizontal_chainStyle="spread_inside"
+        srx:layout_constraintHorizontal_weight="1"
+        srx:layout_constraintLeft_toLeftOf="parent"
+        srx:layout_constraintRight_toLeftOf="@+id/tv_second"
+        srx:layout_constraintTop_toBottomOf="@+id/baseTitleLayout" />
+
+    <TextView
+        android:id="@+id/tv_second"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="xzcxz"
+        srx:layout_constraintHorizontal_chainStyle="spread_inside"
+        srx:layout_constraintHorizontal_weight="1"
+        srx:layout_constraintLeft_toRightOf="@+id/tv_content"
+        srx:layout_constraintRight_toRightOf="parent"
+        srx:layout_constraintTop_toBottomOf="@+id/baseTitleLayout" />
+
+    <TextView
+        android:id="@+id/tv_sigin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/default_font_categary_color"
+        android:gravity="center"
+        android:text="dfdsfds"
+        srx:layout_constraintDimensionRatio="h,6:1.5"
+        srx:layout_constraintLeft_toLeftOf="parent"
+        srx:layout_constraintRight_toRightOf="parent"
+        srx:layout_constraintTop_toBottomOf="@+id/tv_content" />
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="dfsdfs"
+        srx:layout_constraintHorizontal_chainStyle="packed"
+        srx:layout_constraintLeft_toLeftOf="parent"
+        srx:layout_constraintRight_toLeftOf="@+id/tv_two"
+        srx:layout_constraintTop_toBottomOf="@+id/tv_sigin" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="dfsdfs"
+        srx:layout_constraintLeft_toRightOf="@+id/tv_one"
+        srx:layout_constraintRight_toLeftOf="@+id/tv_three"
+        srx:layout_constraintTop_toBottomOf="@+id/tv_sigin" />
+
+    <TextView
+        android:id="@+id/tv_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="dfsdfs"
+        srx:layout_constraintLeft_toRightOf="@+id/tv_two"
+        srx:layout_constraintRight_toRightOf="parent"
+        srx:layout_constraintTop_toBottomOf="@+id/tv_sigin" />
+
+    <TextView
+        android:id="@+id/tv_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/default_font_categary_color"
+        android:padding="30dp"
+        android:text="center"
+        android:visibility="visible"
+        srx:layout_constraintBottom_toBottomOf="parent"
+        srx:layout_constraintLeft_toLeftOf="parent"
+        srx:layout_constraintRight_toRightOf="parent"
+        srx:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/base_background_color"
+        android:padding="30dp"
+        android:text="dsffdf"
+        srx:layout_constraintBottom_toBottomOf="@+id/tv_four"
+        srx:layout_constraintLeft_toLeftOf="@+id/tv_four"
+        srx:layout_constraintRight_toRightOf="parent"
+        srx:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        srx:layout_constraintGuide_begin="200dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="aaaaaa"
+        srx:layout_constraintStart_toStartOf="parent"
+        srx:layout_constraintTop_toBottomOf="@+id/guideline_one" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Button"
+        srx:layout_constraintBottom_toBottomOf="parent"
+        srx:layout_constraintEnd_toEndOf="parent"
+        srx:layout_constraintStart_toStartOf="parent"
+        srx:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        srx:layout_constraintEnd_toEndOf="@+id/tv_four"
+        srx:layout_constraintHorizontal_bias="0.9"
+        srx:layout_constraintStart_toStartOf="@+id/tv_four"
+        srx:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        srx:layout_constraintBottom_toTopOf="@+id/button2"
+        srx:layout_constraintEnd_toEndOf="parent"
+        srx:layout_constraintStart_toEndOf="@+id/button"
+        srx:layout_constraintTop_toTopOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="TextView"
+        srx:layout_constraintEnd_toEndOf="parent"
+        srx:layout_constraintStart_toStartOf="parent"
+        srx:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView"
+        srx:layout_constraintBottom_toBottomOf="@+id/textView"
+        srx:layout_constraintEnd_toEndOf="@+id/textView"
+        srx:layout_constraintHorizontal_bias="0.37"
+        srx:layout_constraintStart_toStartOf="@+id/textView"
+        srx:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="6dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        srx:layout_constraintBottom_toTopOf="@+id/button5"
+        srx:layout_constraintEnd_toEndOf="parent"
+        srx:layout_constraintHorizontal_bias="0.0"
+        srx:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="35dp"
+        android:orientation="horizontal"
+        srx:layout_constraintBottom_toBottomOf="parent"
+        srx:layout_constraintEnd_toStartOf="@+id/button5"
+        srx:layout_constraintGuide_begin="475dp"
+        srx:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        srx:layout_constraintBottom_toBottomOf="parent"
+        srx:layout_constraintEnd_toStartOf="@+id/button6"
+        srx:layout_constraintStart_toEndOf="@+id/guideline"
+        srx:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Button"
+        srx:layout_constraintEnd_toStartOf="@+id/textView3"
+        srx:layout_constraintStart_toEndOf="@+id/button5"
+        srx:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:text="TextView"
+        srx:layout_constraintEnd_toEndOf="parent"
+        srx:layout_constraintStart_toEndOf="@+id/button6"
+        srx:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <!-- <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/img_icon"/>
+     <ImageView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/img_url"/>
+     <ViewStub
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/viewStub"
+         android:layout="@layout/base_activity_emty_view"
+         android:inflatedId="@+id/emty_view_id"
+         android:layout_gravity="center"
+         />
+     <com.srx.huangweishui.common.view.BaseWebViewLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@+id/baseWebViewLayout"
+         srx:base_pregress_isvisible="true"/>-->
+</android.support.constraint.ConstraintLayout>
